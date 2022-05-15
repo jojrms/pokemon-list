@@ -1,4 +1,29 @@
+import { useEffect, useState } from "react";
+import PokemonDetail from "./Structures/PokemonDetail";
+
 const Initial = () => {
+
+    const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon/')
+    const [pokemons, setPokemons] = useState([])
+
+    const getAllPokemons = async () => {
+        const res = await fetch(url)
+        const data = await res.json()
+    
+        function createPokemonObject(results)  { 
+          results.forEach( async pokemon => {
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+            const data =  await res.json()
+
+            setPokemons( currentList => [...currentList, data])
+            })
+        }
+        createPokemonObject(data.results)
+      }
+    
+     useEffect(() => {
+      getAllPokemons()
+     }, [])
 
 
     return(
@@ -13,7 +38,7 @@ const Initial = () => {
                 </ul>
                 <button/>  
             </header>
-            <aside>
+            <aside className="asideInitial">
                 <div>
                     <h2>Qual Pokemón Você Quer?</h2>
                     <h1>Charizard</h1>
@@ -30,6 +55,11 @@ const Initial = () => {
 
             <aside>
                 <h2>Pokedéx</h2>
+                <aside className="asideExibitionPokemons">
+                    {pokemons.map( (pokemon) => 
+                        <PokemonDetail/>
+                    )}
+                </aside>
             </aside>
         </section>
     )
