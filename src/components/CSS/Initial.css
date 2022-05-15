@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Poppins:wght@100;200;300;400;500;600;700&family=VT323&display=swap');
+
+body, #root, .App{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #190D35;
+    font-family: Poppins;
+}
+
+body *{
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+#sectionAbsolute{
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+header{
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    border-bottom: 1px solid #ffffff0c;
+}
+header span:nth-of-type(1){
+    width: 30vw;
+    height: 30vw;
+    background-color: #5e36bbe1;
+    display: block;
+    margin: -5vw;
+    position: absolute;
+    border-radius: 100%;
+    filter: blur(10vw);
+}
+header i{
+    width: 8vw;
+    height: 100%;
+    background-image: url(https://d1x7zurbps6occ.cloudfront.net/logo/logo-brand-pokemon.png);
+    background-size: contain;
+    filter: invert(1);
+    margin: auto;
+    margin-left: 3vw;
+}
+header ul{
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    grid-gap: 4vw;
+    list-style: none;
+}
+header ul li{
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+header button{
+    width: 4vw;
+    height: 4vw;
+    background-image: url(https://img.icons8.com/ios-glyphs/30/000000/search--v1.png);
+    background-size: 50%;
+    margin: auto;
+    margin-right: 2vw;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+
+
+
+#sectionAbsolute aside:nth-of-type(1){
+    width: 100%;
+    display: flex;
+    z-index: 5;
+    position: relative;
+}
+#sectionAbsolute aside:nth-of-type(1) div:nth-of-type(1){
+    width: 45%;
+    margin-top: 8vw;
+    margin-left: 4vw;
+    position: absolute;
+}
+#sectionAbsolute aside:nth-of-type(1) div:nth-of-type(1) h2{
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: .5px;
+    margin: 0;
+    margin-bottom: -1vw;
+}
+#sectionAbsolute aside:nth-of-type(1) div:nth-of-type(1) h1{
+    margin: 0;
+    font-size: 8vw;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+#sectionAbsolute aside:nth-of-type(1) div:nth-of-type(1) p{
+    margin: 0;
+    font-size: 1.2vw;
+    color: #ffffff96;
+}
+#sectionAbsolute aside:nth-of-type(1) div:nth-of-type(2){
+    width: 60%;
+    height: 35vw;
+    background-color: #110925;
+    border-top-left-radius: 18vw;
+    border-bottom-left-radius: 18vw;
+    margin: auto;
+    margin-right: 0;
+    display: flex;
+}
+#sectionAbsolute aside:nth-of-type(1) div:nth-of-type(2) img{
+    width: 70%;
+    margin: auto;
+    margin-top: -2vw;
+}
+
+
+
+
+#sectionAbsolute aside:nth-of-type(2){
+    width: 100%;
+    height: fit-content;
+    margin-top: 5vw;
+    padding-bottom: 5vw;
+}
+#sectionAbsolute aside:nth-of-type(2) h2{
+    margin: 0;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-left: 4vw;
+}

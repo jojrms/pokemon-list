@@ -1,13 +1,15 @@
-import { BrowserRouter, Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Initial from "./components/Initial";
+
+import './components/CSS/Initial.css'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Router>
+        <Routes>
           <Route path='/' element={<Initial/>}/>
-        </Router>    
+        </Routes>    
       </div>  
     </BrowserRouter>
   );
