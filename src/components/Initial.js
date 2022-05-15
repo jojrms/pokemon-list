@@ -15,6 +15,8 @@ const Initial = () => {
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
             const data =  await res.json()
 
+            console.log(data);
+
             setPokemons( currentList => [...currentList, data])
             })
         }
@@ -57,7 +59,19 @@ const Initial = () => {
                 <h2>Pokedéx</h2>
                 <aside className="asideExibitionPokemons">
                     {pokemons.map( (pokemon) => 
-                        <PokemonDetail/>
+                        <PokemonDetail
+                            src={pokemon.sprites.other.dream_world.front_default}
+                            name={pokemon.name}
+                            type={pokemon.types.map( type => {
+                                return(
+                                    <span className={type.type.name}/>
+                                )
+                            })}
+                            hp={pokemon.stats[0].base_stat}
+                            attack={pokemon.stats[1].base_stat}
+                            defense={pokemon.stats[2].base_stat}
+                            speed={pokemon.stats[3].base_stat}
+                        />
                     )}
                 </aside>
             </aside>
