@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Router, Route } from "react-router-dom";
 import Initial from "./components/Initial";
 
 function App() {
